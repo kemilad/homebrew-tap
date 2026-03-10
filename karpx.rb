@@ -5,21 +5,21 @@
 class Karpx < Formula
   desc "⚡ Karpenter for EKS — managed from your terminal"
   homepage "https://github.com/kemilad/karpx"
-  version "0.1.4"
+  version "0.1.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kemilad/karpx/releases/download/v0.1.4/karpx_darwin_amd64.tar.gz"
-      sha256 "43c1706a029f5cb7f248a5ecaacb7e398e77f7a1567a165298e561b4af027788"
+      url "https://github.com/kemilad/karpx/releases/download/v0.1.5/karpx_darwin_amd64.tar.gz"
+      sha256 "ca679feb948d77cbc31760238db5b7478229716e6e445c7c0bbd97c52a5095a9"
 
       define_method(:install) do
         bin.install "karpx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kemilad/karpx/releases/download/v0.1.4/karpx_darwin_arm64.tar.gz"
-      sha256 "35bc4e6ae38209bab0f068ab81d4265f95ca51a453e07be43f48d2edb96ebed9"
+      url "https://github.com/kemilad/karpx/releases/download/v0.1.5/karpx_darwin_arm64.tar.gz"
+      sha256 "7e9ac055dd8adec6bb3dee94eca629ba8b161d46919bb17d5291e40d41f4d220"
 
       define_method(:install) do
         bin.install "karpx"
@@ -29,15 +29,15 @@ class Karpx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kemilad/karpx/releases/download/v0.1.4/karpx_linux_amd64.tar.gz"
-      sha256 "267c2a51d5474a148f1c64eb409ef79470b00e7db925e7b2cdc7ef217bf8cfad"
+      url "https://github.com/kemilad/karpx/releases/download/v0.1.5/karpx_linux_amd64.tar.gz"
+      sha256 "981519d9e57e51631ec8a3e3558f623b85c8af612c0cab2fd0156047680556ba"
       define_method(:install) do
         bin.install "karpx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kemilad/karpx/releases/download/v0.1.4/karpx_linux_arm64.tar.gz"
-      sha256 "3df9b28f339fd61c1169d59d0ea17372f57d11277654dcf499153bc32f91265f"
+      url "https://github.com/kemilad/karpx/releases/download/v0.1.5/karpx_linux_arm64.tar.gz"
+      sha256 "0f13437da97511abfc5ac9fb20957f7549c51c1ac713bbb012641f63552cb88a"
       define_method(:install) do
         bin.install "karpx"
       end
